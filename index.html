@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Template</title>
+    <script src="https://kit.fontawesome.com/e38391ffd7.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="container-fluid bg-custom">
+    <!--top navbar-->
+    <nav class="navbar bg-light rounded border-primary-subtle border">
+        <div class="container-fluid">
+            <!--beginning of dropdown-->
+            <div data-bs-toggle="dropdown" class="d-block d-md-none">
+                <a class="btn btn-primary dropdown-toggle position-relative" href="#" role="button"
+                    id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Inbox
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                        3
+                        <span class="visually-hidden">unread messages</span>
+                    </span>
+
+                </a>
+
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" href="#">Sent</a>
+                    <a class="dropdown-item" href="#">Drafts</a>
+                    <a class="dropdown-item" href="#">Favorited</a>
+                </div>
+            </div>
+            <a class="navbar-brand text-secondary" href="#"> <!--logo and name-->
+                <i class="fa-solid fa-envelope"></i><i class="fa-brands fa-maxcdn"></i>egaMail
+            </a>
+            <!--settings and user buttons includes offcanvas code-->
+            <button type="button" class="btn btn-secondary" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasExample" aria-controls="offcanvasExample"
+                style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                <i class="fa-solid fa-users-gear"></i>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample"
+                aria-labelledby="offcanvasExampleLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Email and Account Settings</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <div>
+                        Choose an option to change your email or account settings.
+                    </div>
+
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Manage Your Account</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Settings</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Sign Out</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!--Search Bar-->
+    <div class="container-fluid">
+        <nav class="navbar searchbar" style="background-color: #e3f2fd;">
+            <!--filter button-->
+            <button type="button" class="btn btn-secondary"
+                style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                <i class="fa-solid fa-filter"></i>
+            </button>
+            <form class="form-inline w-50"> <!--search form-->
+                <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-light" type="submit">Search</button>
+            </form>
+            <!--sort button-->
+            <button type="button" class="btn btn-secondary"
+                style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                <i class="fa-solid fa-sort"></i>
+            </button>
+        </nav>
+    </div>
+    <!--where email container begins-->
+    <div class="container-fluid">
+        <div class="row">
+            <!--sidebar code appears in medium, displays different email boxes-->
+            <div class="sidebar d-none d-md-block col-md-3 col-lg-2 rounded-start">
+                <div class="sidebarpad">
+                    <nav class="nav flex-column nav-pills">
+                        <a class="nav-link active nav-item position-relative" aria-current="page" href="#">Inbox
+                            <span
+                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                3
+                                <span class="visually-hidden">unread messages</span>
+                            </span>
+                        </a>
+                        <a class="nav-link nav-item" href="#">Sent</a>
+                        <a class="nav-link nav-item" href="#">Drafts</a>
+                        <a class="nav-link nav-item" href="#">Favorited</a>
+                        <a class="nav-link nav-item" href="#">Trash</a>
+                    </nav>
+
+                </div>
+            </div>
+            <div class="emailfolder col-sm-12 col-md-9 col-lg-4">
+                <!--beginning of email link list for large viewport and larger, uses this instead of accordion-->
+                <div class="list-group d-none d-lg-block">
+                    <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">Re) Running late on my project!</h5>
+                            <small>March 12, 2023<br>4:00 PM</small>
+                        </div>
+                        <small>From: Mr. Martin (mrmartin@bayvalleytech.com)</small>
+                        <p class="mb-1"> Sounds like you had a great night. I will
+                            extend your paper deadline to Wednesday at 11:59 PM. It must be submitted toturnitin.com.
+                            ...</p>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action" aria-current="false">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">Re) Running late on my project!</h5>
+                            <small>March 12, 2023<br>4:00 PM</small>
+                        </div>
+                        <small>From: Mr. Martin (mrmartin@bayvalleytech.com)</small>
+                        <p class="mb-1"> Sounds like you had a great night. I will
+                            extend your paper deadline to Wednesday at 11:59 PM. It must be submitted toturnitin.com.
+                            ...</p>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action" aria-current="false">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">Re) Running late on my project!</h5>
+                            <small>March 12, 2023<br>4:00 PM</small>
+                        </div>
+                        <small>From: Mr. Martin (mrmartin@bayvalleytech.com)</small>
+                        <p class="mb-1"> Sounds like you had a great night. I will
+                            extend your paper deadline to Wednesday at 11:59 PM. It must be submitted toturnitin.com.
+                            ...</p>
+                    </a>
+                </div>
+                <!--beginning of accordion component-->
+                <div class="accordion accordion-flush d-lg-none" id="emailfolder">
+                    <div class="accordion-item">
+                        <div class="btn-group-toggle favoritebar px-2" data-toggle="buttons">
+                            <label class="btn btn-outline-warning active btn-sm">
+                                <input type="checkbox" autocomplete="off"><i class="fas fa-star"></i>
+                            </label>
+                            <div class="datetime">March 12, 2023<br>4:00 PM</div>
+                        </div>
+                        <p class="tofrom">To: Patrick<br>From: Mr. Martin</p>
+                        <h2 class="accordion-header pt-0" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                aria-controls="flush-collapseOne">
+                                Re) Running late on my project!
+                            </button>
+
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Patrick,<br> Sounds like you had a great night. I will
+                                extend
+                                your paper deadline to <code>Wednesday at 11:59 PM</code>. It must be submitted to
+                                <code>turnitin.com</code><br>Please refer to my sallabus for information on how to
+                                submit your paper. I appreciate your concedrn for my bald head. My wife likes it and
+                                I
+                                don't get paid enough to get hair implants. <br>On a side note... What were you
+                                drinking
+                                last night? Next time you email me I'd like a bottle of whatever you had so I don't
+                                have
+                                to remember what you said. <br>Good yard <br>- Mr. Martin
+                            </div>
+                            <div class="btn-group px-5 pb-2" role="group" aria-label="Basic example">
+                                <button type="button" class="btn btn-primary">Reply</button>
+                                <button type="button" class="btn btn-primary">Forward</button>
+                                <button type="button" class="btn btn-danger">Trash</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+
+                        <div class="btn-group-toggle favoritebar px-2" data-toggle="buttons">
+                            <label class="btn btn-outline-warning active btn-sm">
+                                <input type="checkbox" autocomplete="off"><i class="fas fa-star"></i>
+                            </label>
+                            <div class="datetime">date/time</div>
+                        </div>
+
+                        <h2 class="accordion-header" id="flush-headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                aria-controls="flush-collapseTwo">
+                                Accordion Item #2
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                                demonstrate the <code>.accordion-flush</code> class. This is the second item's
+                                accordion
+                                body. Let's imagine this being filled with some actual content.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="btn-group-toggle favoritebar px-2" data-toggle="buttons">
+                            <label class="btn btn-outline-warning active btn-sm">
+                                <input type="checkbox" autocomplete="off"><i class="fas fa-star"></i>
+                            </label>
+                            <div class="datetime">date/time</div>
+                        </div>
+                        <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                aria-controls="flush-collapseThree">
+                                Accordion Item #3
+                            </button>
+                        </h2>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                                demonstrate the <code>.accordion-flush</code> class. This is the third item's
+                                accordion
+                                body. Nothing more exciting happening here in terms of content, but just filling up
+                                the
+                                space to make it look, at least at first glance, a bit more representative of how
+                                this
+                                would look in a real-world application.</div>
+                        </div>
+                    </div>
+                </div>
+                <!--page selector-->
+                <div class="pageselector d-flex align-items-end justify-content-center">
+                    <nav aria-label="Page navigation">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1">Previous</a>
+                            </li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+
+
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#">Next</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <!--right side reading pad-->
+            <div class="sidebar d-none d-lg-block col-lg-6 rounded-end">
+                <div class="sidebarpad container flex-column d-flex">
+                    <div class="container row h-100 w-100">
+                        <!--iframe code-->
+                        <iframe src="blank.html" frameborder="1" name="test" id="test"
+                            class="d-none d-lg-block col-lg-11"></iframe>
+                    </div>
+                    <div class="row"></div>
+                    <div class="btn-group px-5 pb-2 d-block" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#replyModal">Reply</button>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#forwardModal">Forward</button>
+                        <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                            data-bs-target="#trashModal">Trash</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!--Reply Modal-->
+    <div class="modal fade" id="replyModal" tabindex="-1" aria-labelledby="replyModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="replyModalLabel">Reply</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="message-text" class="col-form-label">Message:</label>
+                            <textarea class="form-control" id="message-text"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Save As Draft</button>
+                    <button type="button" class="btn btn-primary">Send message</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--forward Modal-->
+    <div class="modal fade" id="forwardModal" tabindex="-1" aria-labelledby="forwardModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="forwardModalLabel">Forward</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="recipient-name" class="col-form-label">Recipient:</label>
+                            <input type="text" class="form-control" id="recipient-name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="message-text" class="col-form-label">Message:</label>
+                            <textarea class="form-control" id="message-text"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Save As Draft</button>
+                    <button type="button" class="btn btn-primary">Send message</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- trash Modal -->
+    <div class="modal fade" id="trashModal" tabindex="-1" aria-labelledby="trashModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="trashModal">Delete</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Are you sure you want to send this mail to trash?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-danger">Trash</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--bootstrap javascript-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+.navbar {}
+
+.searchbar {
+    justify-content: space-around;
+}
+
+.emailfolder {
+    background-color: #FDEEE3;
+    height: 100vh;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 20px solid #4e6d9b;
+    border-top: 20px solid #4e6d9b;
+}
+
+.form-inline {
+    display: flex;
+}
+
+.bg-custom {
+    background-color: #e3f2fd;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.emails {
+    height: 100px;
+}
+
+.fa-star {
+    color: white;
+}
+
+.favoritebar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 5px;
+    font-size: 10px;
+}
+
+.tofrom {
+    font-size: 10px;
+    padding-left: 15px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.datetime {
+    text-align: right;
+}
+
+.sidebar {
+    background-color: #4e6d9b;
+    height: 100vh;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.sidebarpad {
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+#test {
+    height: 95%;
+    width: 100%;
+    border: 0;
+    margin: 20px;
+
+}
