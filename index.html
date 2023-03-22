@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Email Template</title>
-    <script src="https://kit.fontawesome.com/e38391ffd7.js" crossorigin="anonymous"></script>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
@@ -91,7 +91,7 @@
     </div>
     <!--where email container begins-->
     <div class="container-fluid">
-        <div class="row">
+        <div class="row emailpad">
             <!--sidebar code appears in medium, displays different email boxes-->
             <div class="sidebar d-none d-md-block col-md-3 col-lg-2 rounded-start">
                 <div class="sidebarpad">
@@ -114,7 +114,8 @@
             <div class="emailfolder col-sm-12 col-md-9 col-lg-4">
                 <!--beginning of email link list for large viewport and larger, uses this instead of accordion-->
                 <div class="list-group d-none d-lg-block">
-                    <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+                    <a href="blank.html" class="list-group-item list-group-item-action" aria-current="false"
+                        target="test">
                         <div class="d-flex w-100 justify-content-between">
                             <h5 class="mb-1">Re) Running late on my project!</h5>
                             <small>March 12, 2023<br>4:00 PM</small>
@@ -124,116 +125,96 @@
                             extend your paper deadline to Wednesday at 11:59 PM. It must be submitted toturnitin.com.
                             ...</p>
                     </a>
-                    <a href="#" class="list-group-item list-group-item-action" aria-current="false">
+                    <a href="email2.html" class="list-group-item list-group-item-action" aria-current="false"
+                        target="test">
                         <div class="d-flex w-100 justify-content-between">
-                            <h5 class="mb-1">Re) Running late on my project!</h5>
-                            <small>March 12, 2023<br>4:00 PM</small>
+                            <h5 class="mb-1">Thank you for the shorts!!!!!</h5>
+                            <small>March 11, 2023<br>7:50 PM</small>
                         </div>
-                        <small>From: Mr. Martin (mrmartin@bayvalleytech.com)</small>
-                        <p class="mb-1"> Sounds like you had a great night. I will
-                            extend your paper deadline to Wednesday at 11:59 PM. It must be submitted toturnitin.com.
-                            ...</p>
+                        <small>From: Samantha (samathastockton@gmail.com)</small>
+                        <p class="mb-1">Not even joking. Those shorts you sent me are the best shorts I've ever worn and
+                            I've been wearing shorts for 37 years. These make me feel ...</p>
                     </a>
-                    <a href="#" class="list-group-item list-group-item-action" aria-current="false">
+                    <a href="email3.html" class="list-group-item list-group-item-action" aria-current="false"
+                        target="test">
                         <div class="d-flex w-100 justify-content-between">
-                            <h5 class="mb-1">Re) Running late on my project!</h5>
-                            <small>March 12, 2023<br>4:00 PM</small>
+                            <h5 class="mb-1">Lost a member of my family</h5>
+                            <small>March 11, 2023<br>9:00 AM</small>
                         </div>
-                        <small>From: Mr. Martin (mrmartin@bayvalleytech.com)</small>
+                        <small>From: Mary (maryforever@gmail.com)</small>
                         <p class="mb-1"> Sounds like you had a great night. I will
                             extend your paper deadline to Wednesday at 11:59 PM. It must be submitted toturnitin.com.
                             ...</p>
                     </a>
                 </div>
-                <!--beginning of accordion component-->
-                <div class="accordion accordion-flush d-lg-none" id="emailfolder">
-                    <div class="accordion-item">
-                        <div class="btn-group-toggle favoritebar px-2" data-toggle="buttons">
-                            <label class="btn btn-outline-warning active btn-sm">
-                                <input type="checkbox" autocomplete="off"><i class="fas fa-star"></i>
-                            </label>
-                            <div class="datetime">March 12, 2023<br>4:00 PM</div>
-                        </div>
-                        <p class="tofrom">To: Patrick<br>From: Mr. Martin</p>
-                        <h2 class="accordion-header pt-0" id="flush-headingOne">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#flush-collapseOne" aria-expanded="false"
-                                aria-controls="flush-collapseOne">
-                                Re) Running late on my project!
-                            </button>
-
-                        </h2>
-                        <div id="flush-collapseOne" class="accordion-collapse collapse"
-                            aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">Patrick,<br> Sounds like you had a great night. I will
-                                extend
-                                your paper deadline to <code>Wednesday at 11:59 PM</code>. It must be submitted to
-                                <code>turnitin.com</code><br>Please refer to my sallabus for information on how to
-                                submit your paper. I appreciate your concedrn for my bald head. My wife likes it and
-                                I
-                                don't get paid enough to get hair implants. <br>On a side note... What were you
-                                drinking
-                                last night? Next time you email me I'd like a bottle of whatever you had so I don't
-                                have
-                                to remember what you said. <br>Good yard <br>- Mr. Martin
+                <!--beginning of what used to be accordion component, now open in modal, for small to med viewports-->
+                <div class="d-lg-none" id="emailfolder">
+                    <div class="list-group">
+                        <a href="blank.html" class="list-group-item list-group-item-action" aria-current="false"
+                            target="test2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1">Re) Running late on my project!</h5>
+                                <small>March 12, 2023<br>4:00 PM</small>
                             </div>
-                            <div class="btn-group px-5 pb-2" role="group" aria-label="Basic example">
-                                <button type="button" class="btn btn-primary">Reply</button>
-                                <button type="button" class="btn btn-primary">Forward</button>
-                                <button type="button" class="btn btn-danger">Trash</button>
+                            <small>From: Mr. Martin (mrmartin@bayvalleytech.com)</small>
+                            <p class="mb-1"> Sounds like you had a great night. I will
+                                extend your paper deadline to Wednesday at 11:59 PM. It must be submitted
+                                toturnitin.com.
+                                ...</p>
+                        </a>
+                        <a href="email2.html" class="list-group-item list-group-item-action" aria-current="false"
+                            target="test2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1">Thank you for the shorts!!!!!</h5>
+                                <small>March 11, 2023<br>7:50 PM</small>
+                            </div>
+                            <small>From: Samantha (samathastockton@gmail.com)</small>
+                            <p class="mb-1">Not even joking. Those shorts you sent me are the best shorts I've ever worn
+                                and
+                                I've been wearing shorts for 37 years. These make me feel ...</p>
+                        </a>
+                        <a href="email3.html" class="list-group-item list-group-item-action" aria-current="false"
+                            target="test2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1">Lost a member of my family</h5>
+                                <small>March 11, 2023<br>9:00 AM</small>
+                            </div>
+                            <small>From: Mary (maryforever@gmail.com)</small>
+                            <p class="mb-1"> Sounds like you had a great night. I will
+                                extend your paper deadline to Wednesday at 11:59 PM. It must be submitted
+                                toturnitin.com.
+                                ...</p>
+                        </a>
+                    </div>
+                    <!--beginning of test code, working on setting up links to call html files to replace accordion -->
+
+                    <!-- Modal -->
+                    <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-fullscreen">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Inbox</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body h-100 w-100">
+                                    <div class="container-fluid h-100 w-100">
+                                        <!--iframe code-->
+                                        <iframe src="blank.html" frameborder="1" name="test2" id="test2">
+                                        </iframe>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="accordion-item">
 
-                        <div class="btn-group-toggle favoritebar px-2" data-toggle="buttons">
-                            <label class="btn btn-outline-warning active btn-sm">
-                                <input type="checkbox" autocomplete="off"><i class="fas fa-star"></i>
-                            </label>
-                            <div class="datetime">date/time</div>
-                        </div>
-
-                        <h2 class="accordion-header" id="flush-headingTwo">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#flush-collapseTwo" aria-expanded="false"
-                                aria-controls="flush-collapseTwo">
-                                Accordion Item #2
-                            </button>
-                        </h2>
-                        <div id="flush-collapseTwo" class="accordion-collapse collapse"
-                            aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">Placeholder content for this accordion, which is intended to
-                                demonstrate the <code>.accordion-flush</code> class. This is the second item's
-                                accordion
-                                body. Let's imagine this being filled with some actual content.</div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <div class="btn-group-toggle favoritebar px-2" data-toggle="buttons">
-                            <label class="btn btn-outline-warning active btn-sm">
-                                <input type="checkbox" autocomplete="off"><i class="fas fa-star"></i>
-                            </label>
-                            <div class="datetime">date/time</div>
-                        </div>
-                        <h2 class="accordion-header" id="flush-headingThree">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#flush-collapseThree" aria-expanded="false"
-                                aria-controls="flush-collapseThree">
-                                Accordion Item #3
-                            </button>
-                        </h2>
-                        <div id="flush-collapseThree" class="accordion-collapse collapse"
-                            aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">Placeholder content for this accordion, which is intended to
-                                demonstrate the <code>.accordion-flush</code> class. This is the third item's
-                                accordion
-                                body. Nothing more exciting happening here in terms of content, but just filling up
-                                the
-                                space to make it look, at least at first glance, a bit more representative of how
-                                this
-                                would look in a real-world application.</div>
-                        </div>
-                    </div>
+                    <!--end of test code-->
                 </div>
                 <!--page selector-->
                 <div class="pageselector d-flex align-items-end justify-content-center">
@@ -350,6 +331,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/e38391ffd7.js" crossorigin="anonymous"></script>
+
+
 </body>
 
 </html>
