@@ -71,3 +71,18 @@
     margin: 20px;
 
 }
+.emailpad {
+    height: 100%;
+}
+
+/*borders for small and med views*/
+@media all and (max-width: 768px) {
+    .emailfolder {
+        border-left: 15px solid #4e6d9b;
+    }
+}
+@media all and (max-width: 992px) {
+    .emailfolder {
+        border-right: 15px solid #4e6d9b;
+    }
+}
